@@ -1116,20 +1116,57 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://c.mcqa25x.dpdns.org/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="https://c.mcqa25x.dpdns.org/">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="openImageViewer()" data-toggle="tooltip" data-placement="bottom" title="图片查看器">
                         <div class="xe-comment-entry">
                             <a class="xe-user-img">
                                 <img data-src="https://c.mcqa25x.dpdns.org/favicon.ico" class="lozad img-circle" width="40" src="/images/loading.svg" onerror="this.src='/images/loading.svg'">
                             </a>
                             <div class="xe-comment">
-                                <a href="https://c.mcqa25x.dpdns.org/" target="_blank" class="xe-user-name overflowClip_1">
-                                    <strong>c.mcqa25x</strong>
+                                <a href="javascript:void(0)" class="xe-user-name overflowClip_1">
+                                    <strong>图片查看器</strong>
                                 </a>
-                                <p class="overflowClip_2">c.mcqa25x.dpdns.org</p>
+                                <p class="overflowClip_2">点击打开图片查看器</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                <!-- 图片查看器模态框 -->
+                <div id="imageViewerModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="imageViewerModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="imageViewerModalLabel">图片查看器</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="image-container" style="text-align: center;">
+                                    <img id="viewerImage" src="" alt="查看图片" style="max-width: 100%; max-height: 600px;">
+                                </div>
+                                <div class="image-controls" style="margin-top: 15px; text-align: center;">
+                                    <input type="text" id="imageUrl" class="form-control" placeholder="输入图片URL" style="margin-bottom: 10px;">
+                                    <button class="btn btn-primary" onclick="loadImage()">加载图片</button>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                    function openImageViewer() {
+                        $('#imageViewerModal').modal('show');
+                    }
+                    
+                    function loadImage() {
+                        var imageUrl = document.getElementById('imageUrl').value;
+                        if (imageUrl) {
+                            document.getElementById('viewerImage').src = imageUrl;
+                        }
+                    }
+                </script>
             </div>
             <br />
 

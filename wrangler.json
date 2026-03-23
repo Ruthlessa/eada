@@ -1,11 +1,11 @@
 {
-  "name": "eada",
-  "compatibility_date": "2026-02-24",
-  "compatibility_flags": ["nodejs_compat"],
+  "name": "eada", // 项目名称
+  "compatibility_date": "2026-02-24", // 兼容性日期
+  "compatibility_flags": ["nodejs_compat"], // 兼容性标志，启用Node.js兼容模式
   "assets": {
-    "directory": "."
+    "directory": "." // 静态资源目录
   },
   "observability": {
-    "enabled": true
+    "enabled": true // 启用可观测性
   }
 }

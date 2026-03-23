@@ -1219,6 +1219,14 @@
     document.addEventListener('DOMContentLoaded', function() {
         const observer = lozad('.lozad');
         observer.observe();
+        
+        // 为所有图片添加错误处理，确保即使远程图标加载失败也能显示默认图标
+        document.querySelectorAll('img').forEach(function(img) {
+            img.onerror = function() {
+                // 使用base64编码的默认图标
+                this.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNNTAgMjBDMjcuOSAyMCAxMCAzNy45IDEwIDYwczE3LjkgNDAgNDAgNDAgNDAgLTE3LjkgNDAgLTQwLTE3LjktNDAgLTQwLTQwem0wIDYwYzE2LjUgMCAzMC0xMy41IDMwLTMwcy0xMy41LTMwLTMwLTMwLTMwIDEzLjUtMzAgMzAgMTMuNSAzMCAzMCAzMHoiIGZpbGw9IiMzMzMiIG9wYWNpdHk9IjAuNyIvPjwvc3ZnPg==';
+            };
+        });
     });
 </script>
 

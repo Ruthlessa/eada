@@ -1,52 +1,35 @@
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="无情" />
-    <title>导航 - OneNav</title>
-    <meta name="shenma-site-verification" content="60202685e7327fafe342c095202f078a_1686057438">
-    <meta name="keywords" content="网址导航">
-    <meta name="description" content="导航">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="baidu-bot" content="noindex, nofollow">
-    <meta name="googlebot" content="noindex, nofollow">
+    <title>导航 - 首页</title>
+    <meta name="keywords" content="网址导航,个人导航,实用工具">
+    <meta name="description" content="个人导航网站，收集实用工具和常用网站">
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="preload" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/font-awesome/6.0.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dark.min.css">
     <link rel="stylesheet" href="css/animation.min.css">
     <link rel="stylesheet" href="css/mobile.min.css">
 
+    <link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
+    <!-- Izitoast -->
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/css/iziToast.min.css">
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/js/iziToast.min.js"></script>
 
     <script>
         // 搜索数据对象，用于存储用户定义的搜索配置
         var userDefinedSearchData = {};
         // 是否展开所有分类，默认不展开
         var expandAll = false;
-        
-        // 预加载图片
-        function preloadImages() {
-            var images = [
-                "images/loading.svg"
-            ];
-            
-            for (var i = 0; i < images.length; i++) {
-                var img = new Image();
-                img.src = images[i];
-            }
-        }
-        
-        // 页面加载完成后执行预加载
-        window.onload = preloadImages;
     </script>
-
+    
     <script src="js/header.min.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -54,27 +37,29 @@
         <script src="js/html5shiv.min.js"></script>
         <script src="js/respond.min.js"></script>
     <![endif]-->
-
+    
     <!-- / FB Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://mcqa2580.github.io/eada/">
-    <meta property="og:title" content="一个导航 - OneNav - OneNav">
-    <meta property="og:description" content="OneNav">
-    <meta property="og:site_name" content="一个导航 - OneNav - OneNav">
-    <meta property="og:image" content="images/favicon.png">
+    <meta property="og:title" content="导航 - 首页">
+    <meta property="og:description" content="个人导航网站，收集实用工具和常用网站">
+    <meta property="og:site_name" content="导航">
+    <meta property="og:image" content="images/girl.png">
+    
     <!-- / Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="一个导航 - OneNav - OneNav">
-    <meta name="twitter:description" content="OneNav">
-  
-  <meta name="twitter:image" content="images/favicon.png">
+    <meta name="twitter:title" content="导航 - 首页">
+    <meta name="twitter:description" content="个人导航网站，收集实用工具和常用网站">
+    <meta name="twitter:image" content="images/girl.png">
+    
     <meta name="generator" content="Hexo 5.4.2">
 </head>
 
 <body class="page-body">
     <div class="page-container">
-        <div class="main-content">
 
+
+        <div class="main-content">
             <nav class="navbar user-info-navbar" id="navbar" role="navigation">
                 <ul class="user-info-menu left-links list-inline list-unstyled">
                     <li class="menu-item" style="margin-right: 15px;">
@@ -124,6 +109,7 @@
                         <ul class="search-type">
                             <li><input checked hidden type="radio" name="type" id="type-baidu" value="https://www.baidu.com/s?wd=" data-placeholder="百度一下，你就知道"><label for="type-baidu"><span style="color:#2100E0" class="dark-text">百度</span></label></li>
                             <li><input hidden type="radio" name="type" id="type-bing1" value="https://cn.bing.com/search?q=" data-placeholder="微软 Bing 搜索"><label for="type-bing1"><span style="color:#007daa">Bing</span></label></li>
+                            <li><input hidden type="radio" name="type" id="type-google" value="https://www.google.com/search?q=" data-placeholder="谷歌搜索"><label for="type-google"><span style="color:#3B83FA">G</span><span style="color:#F3442C">o</span><span style="color:#FFC300">o</span><span style="color:#4696F8">g</span><span style="color:#2CAB4E">l</span><span style="color:#F54231">e</span></label></li>
                             <li><input hidden type="radio" name="type" id="type-bili1" value="https://search.bilibili.com/all?keyword=" data-placeholder="哔哩哔哩搜索"><label for="type-bili1"><span style="color:#00a1d6">BiliBili</span></label></li>
                             <li><input hidden type="radio" name="type" id="type-git1" value="https://github.com/search?utf8=%E2%9C%93&q=" data-placeholder="搜索 Github 仓库"><label for="type-git1"><span style="color:#000000" class="dark-text">Github</span></label></li>
                         </ul>
@@ -133,6 +119,7 @@
                         <ul class="search-type">
                             <li><input hidden type="radio" name="type" id="type-search" value="https://www.baidu.com/s?wd=" data-placeholder="百度一下，你就知道"><label for="type-search"><span style="color:#2319dc" class="dark-text">百度</span></label></li>
                             <li><input hidden type="radio" name="type" id="type-bing" value="https://cn.bing.com/search?q=" data-placeholder="微软 Bing 搜索"><label for="type-bing"><span style="color:#007daa">Bing</span></label></li>
+                            <li><input hidden type="radio" name="type" id="type-google1" value="https://www.google.com/search?q=" data-placeholder="谷歌搜索"><label for="type-google1"><span style="color:#3B83FA">G</span><span style="color:#F3442C">o</span><span style="color:#FFC300">o</span><span style="color:#4696F8">g</span><span style="color:#2CAB4E">l</span><span style="color:#F54231">e</span></label></li>
                             <li><input hidden type="radio" name="type" id="type-360" value="https://www.so.com/s?q=" data-placeholder="360好搜"><label for="type-360"><span style="color:#19b955">360</span></label></li>
                             <li><input hidden type="radio" name="type" id="type-sogo" value="https://www.sogou.com/web?query=" data-placeholder="搜狗搜索"><label for="type-sogo"><span style="color:#ff5943">搜狗</span></label></li>
                             <li><input hidden type="radio" name="type" id="type-bili" value="https://search.bilibili.com/all?keyword=" data-placeholder="哔哩哔哩搜索"><label for="type-bili"><span style="color:#00a1d6">BiliBili</span></label></li>
@@ -148,50 +135,70 @@
                             <li><input hidden type="radio" name="type" id="type-links" value="https://link.chinaz.com/" data-placeholder="请输入网址 ( 不带http:// )"><label for="type-links"><span style="color:#313439" class="dark-text">友链检测</span></label></li>
                             <li><input hidden type="radio" name="type" id="type-404" value="https://stool.chinaz.com/https?url=" data-placeholder="请输入网址 ( 不带http:// )"><label for="type-404"><span style="color:#f00">HTTPS检测</span></label></li>
                             <li><input hidden type="radio" name="type" id="type-ciku" value="https://seo.chinaz.com/" data-placeholder="请输入网址 ( 不带http:// )"><label for="type-ciku"><span style="color:#016DBD">SEO查询</span></label></li>
-                            <li><input hidden type="radio" name="type" id="type-network" value="https://www.speedtest.net/" data-placeholder="网络速度测试"><label for="type-network"><span style="color:#0099cc">网络诊断</span></label></li>
                         </ul>
                     </div>
-                    <div class="search-group group-d">
-                        <span class="type-text">社区</span>
-                        <ul class="search-type">
-                            <li><input hidden type="radio" name="type" id="type-zhihu" value="https://www.zhihu.com/search?type=content&q=" data-placeholder="知乎，与你分享刚编的故事"><label for="type-zhihu"><span style="color:#0084ff">知乎</span></label></li>
-                            <li><input hidden type="radio" name="type" id="type-wechat" value="http://weixin.sogou.com/weixin?type=2&query=" data-placeholder="微信"><label for="type-wechat"><span style="color:#00a06a">微信</span></label></li>
-                            <li><input hidden type="radio" name="type" id="type-weibo" value="http://s.weibo.com/weibo/" data-placeholder="微博"><label for="type-weibo"><span style="color:#e6162d">微博</span></label></li>
-                            <li><input hidden type="radio" name="type" id="type-douban" value="https://www.douban.com/search?q=" data-placeholder="豆瓣"><label for="type-douban"><span style="color:#55a300">豆瓣</span></label></li>
-                            <li><input hidden type="radio" name="type" id="type-why" value="https://ask.seowhy.com/search/?q=" data-placeholder="SEO问答社区"><label for="type-why"><span style="color:#428bca">搜外问答</span></label></li>
-                        </ul>
-                    </div>
-                    <div class="search-group group-e">
-                        <span class="type-text">生活</span>
-                        <ul class="search-type">
-                            <li><input hidden type="radio" name="type" id="type-taobao1" value="https://s.taobao.com/search?q=" data-placeholder="淘宝"><label for="type-taobao1"><span style="color:#f40">淘宝</span></label></li>
-                            <li><input hidden type="radio" name="type" id="type-jd" value="https://search.jd.com/Search?keyword=" data-placeholder="京东"><label for="type-jd"><span style="color:#c91623">京东</span></label></li>
-                            <li><input hidden type="radio" name="type" id="type-xiachufang" value="http://www.xiachufang.com/search/?keyword=" data-placeholder="下厨房"><label for="type-xiachufang"><span style="color:#dd3915">下厨房</span></label></li>
-                            <li><input hidden type="radio" name="type" id="type-xiangha" value="https://www.xiangha.com/so/?q=caipu&s=" data-placeholder="香哈菜谱"><label for="type-xiangha"><span style="color:#930">香哈菜谱</span></label></li>
-                            <li><input hidden type="radio" name="type" id="type-12306" value="http://www.12306.cn/?" data-placeholder="12306"><label for="type-12306"><span style="color:#07f">12306</span></label></li>
-                            <li><input hidden type="radio" name="type" id="type-qunar" value="https://www.qunar.com/?" data-placeholder="去哪儿"><label for="type-qunar"><span style="color:#00afc7">去哪儿</span></label></li>
-                            <li><input hidden type="radio" name="type" id="type-快递100" value="http://www.kuaidi100.com/?" data-placeholder="快递100"><label for="type-快递100"><span style="color:#3278e6">快递100</span></label></li>
-                        </ul>
-                    </div>
-                    <div class="search-group group-f">
-                        <span class="type-text">求职</span>
-                        <ul class="search-type">
-                            <li><input hidden type="radio" name="type" id="type-zhaopin" value="https://sou.zhaopin.com/jobs/searchresult.ashx?kw=" data-placeholder="智联招聘"><label for="type-zhaopin"><span style="color:#689fee">智联招聘</span></label></li>
-                            <li><input hidden type="radio" name="type" id="type-51job" value="https://search.51job.com/?" data-placeholder="前程无忧"><label for="type-51job"><span style="color:#ff6000">前程无忧</span></label></li>
-                            <li><input hidden type="radio" name="type" id="type-lagou" value="https://www.lagou.com/jobs/list_" data-placeholder="拉钩网"><label for="type-lagou"><span style="color:#00b38a">拉钩网</span></label></li>
-                            <li><input hidden type="radio" name="type" id="type-liepin" value="https://www.liepin.com/zhaopin/?key=" data-placeholder="猎聘网"><label for="type-liepin"><span style="color:#303a40" class="dark-text">猎聘网</span></label></li>
-                        </ul>
-                    </div>
-                </div>
-                <form action="?s=" method="get" target="_blank" id="super-search-fm">
-                    <input type="text" id="search-text" placeholder="输入关键字搜索" style="outline:0" autocomplete="off">
-                    <button type="submit"><i class="fa fa-search "></i></button>
-                </form>
-                <div class="set-check hidden-xs">
-                    <input type="checkbox" id="set-search-blank" class="bubble-3" autocomplete="off">
-                </div>
-            </div>
-            <script type="text/javascript">
+          <div class="search-group group-d">
+            <span class="type-text">社区</span>
+            <ul class="search-type">
+              <li><input hidden type="radio" name="type" id="type-zhihu"
+                  value="https://www.zhihu.com/search?type=content&q=" data-placeholder="知乎，与你分享刚编的故事"><label
+                  for="type-zhihu"><span style="color:#0084ff">知乎</span></label></li>
+              <li><input hidden type="radio" name="type" id="type-wechat"
+                  value="http://weixin.sogou.com/weixin?type=2&query=" data-placeholder="微信"><label
+                  for="type-wechat"><span style="color:#00a06a">微信</span></label></li>
+              <li><input hidden type="radio" name="type" id="type-weibo" value="http://s.weibo.com/weibo/"
+                  data-placeholder="微博"><label for="type-weibo"><span style="color:#e6162d">微博</span></label></li>
+              <li><input hidden type="radio" name="type" id="type-douban" value="https://www.douban.com/search?q="
+                  data-placeholder="豆瓣"><label for="type-douban"><span style="color:#55a300">豆瓣</span></label></li>
+              <li><input hidden type="radio" name="type" id="type-why" value="https://ask.seowhy.com/search/?q="
+                  data-placeholder="SEO问答社区"><label for="type-why"><span style="color:#428bca">搜外问答</span></label></li>
+            </ul>
+          </div>
+          <div class="search-group group-e">
+            <span class="type-text">生活</span>
+            <ul class="search-type">
+              <li><input hidden type="radio" name="type" id="type-taobao1" value="https://s.taobao.com/search?q="
+                  data-placeholder="淘宝"><label for="type-taobao1"><span style="color:#f40">淘宝</span></label></li>
+              <li><input hidden type="radio" name="type" id="type-jd" value="https://search.jd.com/Search?keyword="
+                  data-placeholder="京东"><label for="type-jd"><span style="color:#c91623">京东</span></label></li>
+              <li><input hidden type="radio" name="type" id="type-xiachufang"
+                  value="http://www.xiachufang.com/search/?keyword=" data-placeholder="下厨房"><label
+                  for="type-xiachufang"><span style="color:#dd3915">下厨房</span></label></li>
+              <li><input hidden type="radio" name="type" id="type-xiangha"
+                  value="https://www.xiangha.com/so/?q=caipu&s=" data-placeholder="香哈菜谱"><label for="type-xiangha"><span
+                    style="color:#930">香哈菜谱</span></label></li>
+              <li><input hidden type="radio" name="type" id="type-12306" value="http://www.12306.cn/?"
+                  data-placeholder="12306"><label for="type-12306"><span style="color:#07f">12306</span></label></li>
+              <li><input hidden type="radio" name="type" id="type-qunar" value="https://www.qunar.com/?"
+                  data-placeholder="去哪儿"><label for="type-qunar"><span style="color:#00afc7">去哪儿</span></label></li>
+              <li><input hidden type="radio" name="type" id="type-快递100" value="http://www.kuaidi100.com/?"
+                  data-placeholder="快递100"><label for="type-快递100"><span style="color:#3278e6">快递100</span></label></li>
+            </ul>
+          </div>
+          <div class="search-group group-f">
+            <span class="type-text">求职</span>
+            <ul class="search-type">
+              <li><input hidden type="radio" name="type" id="type-zhaopin"
+                  value="https://sou.zhaopin.com/jobs/searchresult.ashx?kw=" data-placeholder="智联招聘"><label
+                  for="type-zhaopin"><span style="color:#689fee">智联招聘</span></label></li>
+              <li><input hidden type="radio" name="type" id="type-51job" value="https://search.51job.com/?"
+                  data-placeholder="前程无忧"><label for="type-51job"><span style="color:#ff6000">前程无忧</span></label></li>
+              <li><input hidden type="radio" name="type" id="type-lagou" value="https://www.lagou.com/jobs/list_"
+                  data-placeholder="拉钩网"><label for="type-lagou"><span style="color:#00b38a">拉钩网</span></label></li>
+              <li><input hidden type="radio" name="type" id="type-liepin" value="https://www.liepin.com/zhaopin/?key="
+                  data-placeholder="猎聘网"><label for="type-liepin"><span style="color:#303a40"
+                    class="dark-text">猎聘网</span></label></li>
+            </ul>
+          </div>
+        </div>
+        <form action="?s=" method="get" target="_blank" id="super-search-fm"><input type="text" id="search-text"
+            placeholder="输入关键字搜索" style="outline:0" autocomplete="off"><button type="submit"><i
+              class="fa fa-search "></i></button></form>
+        <div class="set-check hidden-xs">
+          <input type="checkbox" id="set-search-blank" class="bubble-3" autocomplete="off">
+        </div>
+      </div>
+      <script type="text/javascript">
         eval(function (e, t, a, c, i, n) {
           if (i = function (e) {
               return (e < t ? "" : i(parseInt(e / t))) + (35 < (e %= t) ? String.fromCharCode(e + 29) : e.toString(
@@ -212,990 +219,230 @@
           .split("|"), 0, {}));
       </script>
       <!-- 搜索 end -->
-    <!-- 时间显示 -->
-    <div class="time-display" style="text-align: center; font-size: 12px; color: #ff0000; margin: 20px 0;">
-        <div id="current-time"></div>
-        <div id="current-date"></div>
-    </div>
-    
+      
 
-
-                                                                                                                                                                            
-                                                                                                                                                                            
-
-                                                                                                                                                                            
-                                                                                                                                                                            
-      <h4 class="text-gray">
-  <i class="fa-solid fa-tags" style="margin-right: 7px;" id="开发工具"></i>开发工具
-</h4>
+      
+      <!-- 分类导航 -->
+      <div class="row">
+        <!-- 开发工具 -->
+        <div class="col-sm-12">
+          <h3 class="h3-title">
+            <i class="fa-solid fa-code"></i>
+            开发工具
+            <small>
+              <a href="javascript:;" rel="external nofollow" class="expand-btn" data-target=".nav-dev">
+                <i class="fa-solid fa-caret-down"></i>
+              </a>
+            </small>
+          </h3>
+          <div class="nav-dev">
             <div class="row">
-                <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://github.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://github.com/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://github.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>GitHub</strong>
-          </a>
-          <p class="overflowClip_2">全球最大的同性交友社区</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://vercel.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://vercel.com/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://vercel.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>Vercel</strong>
-          </a>
-          <p class="overflowClip_2">目前最好用的网站托管服务</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://console.upyun.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://console.upyun.com/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://console.upyun.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>又拍云</strong>
-          </a>
-          <p class="overflowClip_2">静态文件存储与 CDN 加速</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://console.cloud.tencent.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://console.cloud.tencent.com/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://console.cloud.tencent.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>腾讯云</strong>
-          </a>
-          <p class="overflowClip_2">国内几大云服务商其一，俗称凉心云</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.aliyun.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.aliyun.com/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://www.aliyun.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>阿里云</strong>
-          </a>
-          <p class="overflowClip_2">全球云计算服务及云解决方案提供商</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.bilibili.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.bilibili.com/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://www.bilibili.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>哔哩哔哩</strong>
-          </a>
-          <p class="overflowClip_2">叔叔我啊，最讨厌不能挣钱的东西了</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://cg.163.com/index.html#/pc', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://cg.163.com/index.html#/pc">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://cg.163.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>网易云游戏</strong>
-          </a>
-          <p class="overflowClip_2">网易官方云游戏平台，免下载畅玩</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.aliyundrive.com/drive', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.aliyundrive.com/drive">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://www.aliyundrive.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>阿里云盘</strong>
-          </a>
-          <p class="overflowClip_2">目前正在用的网盘</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://replit.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://replit.com/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://replit.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>Replit</strong>
-          </a>
-          <p class="overflowClip_2">免费的协作式在线 IDE</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://mcqa25x.dpdns.org/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://mcqa25x.dpdns.org/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://mcqa25x.dpdns.org/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>静态随机图片</strong>
-          </a>
-          <p class="overflowClip_2">静态随机图片网站</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://b.mcqa25x.dpdns.org/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://b.mcqa25x.dpdns.org/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://b.mcqa25x.dpdns.org/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>图片网站</strong>
-          </a>
-          <p class="overflowClip_2">高清图片资源库，提供各类精美图片下载</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://ima1ge.mcqa25x.dpdns.org/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://ima1ge.mcqa25x.dpdns.org/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://ima1ge.mcqa25x.dpdns.org/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>Image mcqa25x</strong>
-          </a>
-          <p class="overflowClip_2">图片资源网站</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://nfq.dpdns.org/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://nfq.dpdns.org/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://nfq.dpdns.org/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>NFQ dpdns</strong>
-          </a>
-          <p class="overflowClip_2">安全验证网站</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-</div>
-<br />
-
-      
-      
-      
-      
-      
-      
-      
-      <h4 class="text-gray">
-  <i class="fa-solid fa-tags" style="margin-right: 7px;" id="在线工具"></i>在线工具
-</h4>
-<div class="row">
-                <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://tool.lu/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://tool.lu/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://tool.lu/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>在线工具</strong>
-          </a>
-          <p class="overflowClip_2">在线工具 - 你的工具箱</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://notion-avatar.vercel.app/zh', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://notion-avatar.vercel.app/zh">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://notion-avatar.vercel.app/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>Notion 风格头像制作</strong>
-          </a>
-          <p class="overflowClip_2">一个生成 Notion 风格头像的在线工具</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://freessl.cn/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://freessl.cn/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://freessl.cn/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>FreeSSL</strong>
-          </a>
-          <p class="overflowClip_2">一个提供免费HTTPS证书申请的网站</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://tinify.cn/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://tinify.cn/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://tinify.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>TinyPNG</strong>
-          </a>
-          <p class="overflowClip_2">智能压缩您的WebP、JPEG和PNG图片</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://squoosh.app/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://squoosh.app/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://squoosh.app/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>Squoosh</strong>
-          </a>
-          <p class="overflowClip_2">终极图像压缩，可压缩和比较图像</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://onlineconvertfree.com/zh/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://onlineconvertfree.com/zh/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://onlineconvertfree.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>OnlineConvertFree</strong>
-          </a>
-          <p class="overflowClip_2">在线转换各种文件、视频、音频和照片等</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.speedtest.net/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.speedtest.net/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://www.cloudflare.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>网络诊断</strong>
-          </a>
-          <p class="overflowClip_2">网络连接和速度测试工具</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.dute.org/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.dute.org/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://www.dute.org/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>独特工具箱</strong>
-          </a>
-          <p class="overflowClip_2">致力于打造体验良好的在线工具</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.niceso.fun/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.niceso.fun/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://www.niceso.cn/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>奈斯搜索</strong>
-          </a>
-          <p class="overflowClip_2">坚持做最好用的阿里云盘资源搜索引擎</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://ps.gaoding.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://ps.gaoding.com/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://www.gaoding.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>在线 PS</strong>
-          </a>
-          <p class="overflowClip_2">一款专业精简的在线ps图片处理软件</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://xmsoushu.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://xmsoushu.com/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://www.xmsoushu.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>熊猫搜书</strong>
-          </a>
-          <p class="overflowClip_2">聚合搜索引擎，快速检索网络图书资源</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://caniuse.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://caniuse.com/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://caniuse.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>Can I use ...</strong>
-          </a>
-          <p class="overflowClip_2">最新的浏览器 Web 技术支持表</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-</div>
-<br />
-
-            <h4 class="text-gray">
-                <i class="fa-solid fa-tags" style="margin-right: 7px;" id="学习资源"></i>学习资源
-            </h4>
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.w3school.com.cn/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.w3school.com.cn/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://www.w3schools.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>W3School</strong>
-                                </a>
-                                <p class="overflowClip_2">全球最大的中文 Web 技术教程</p>
-                            </div>
-                        </div>
+              <div class="col-sm-3">
+                <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://github.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="https://github.com/">
+                  <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                      <img data-src="images/favicons/github_com.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
+                    </a>
+                    <div class="xe-comment">
+                      <a href="#" class="xe-user-name overflowClip_1">
+                        <strong>GitHub</strong>
+                      </a>
+                      <p class="overflowClip_2">代码托管平台</p>
                     </div>
+                  </div>
                 </div>
-                
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.runoob.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.runoob.com/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://www.runoob.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>菜鸟教程</strong>
-                                </a>
-                                <p class="overflowClip_2">学的不仅是技术，更是梦想！</p>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://vercel.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="https://vercel.com/">
+                  <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                      <img data-src="images/favicons/vercel_com.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
+                    </a>
+                    <div class="xe-comment">
+                      <a href="#" class="xe-user-name overflowClip_1">
+                        <strong>Vercel</strong>
+                      </a>
+                      <p class="overflowClip_2">静态网站托管</p>
                     </div>
+                  </div>
                 </div>
-                
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://developer.mozilla.org/zh-CN/docs/Web', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://developer.mozilla.org/zh-CN/docs/Web">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://developer.mozilla.org/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>MDN Web Docs</strong>
-                                </a>
-                                <p class="overflowClip_2">面向 Web 开发者的文档</p>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://console.upyun.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="https://console.upyun.com/">
+                  <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                      <img data-src="images/favicons/console_upyun_com.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
+                    </a>
+                    <div class="xe-comment">
+                      <a href="#" class="xe-user-name overflowClip_1">
+                        <strong>又拍云</strong>
+                      </a>
+                      <p class="overflowClip_2">云存储服务</p>
                     </div>
+                  </div>
                 </div>
-                
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.csdn.net/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.csdn.net/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://www.csdn.net/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>CSDN</strong>
-                                </a>
-                                <p class="overflowClip_2">专业开发者社区</p>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://console.cloud.tencent.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="https://console.cloud.tencent.com/">
+                  <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                      <img data-src="images/favicons/console_cloud_tencent_com.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
+                    </a>
+                    <div class="xe-comment">
+                      <a href="#" class="xe-user-name overflowClip_1">
+                        <strong>腾讯云</strong>
+                      </a>
+                      <p class="overflowClip_2">云服务平台</p>
                     </div>
+                  </div>
                 </div>
-                
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.icourse163.org/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.icourse163.org/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://www.icourse163.org/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>中国大学 MOOC</strong>
-                                </a>
-                                <p class="overflowClip_2">国家精品课程在线学习平台</p>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.aliyun.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="https://www.aliyun.com/">
+                  <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                      <img data-src="images/favicons/www_aliyun_com.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
+                    </a>
+                    <div class="xe-comment">
+                      <a href="#" class="xe-user-name overflowClip_1">
+                        <strong>阿里云</strong>
+                      </a>
+                      <p class="overflowClip_2">云服务平台</p>
                     </div>
+                  </div>
                 </div>
-                
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://study.163.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://study.163.com/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://study.163.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>网易云课堂</strong>
-                                </a>
-                                <p class="overflowClip_2">一个专注于成人终身学习的在线教育平台</p>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.bilibili.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="https://www.bilibili.com/">
+                  <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                      <img data-src="images/favicons/www_bilibili_com.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
+                    </a>
+                    <div class="xe-comment">
+                      <a href="#" class="xe-user-name overflowClip_1">
+                        <strong>Bilibili</strong>
+                      </a>
+                      <p class="overflowClip_2">视频分享平台</p>
                     </div>
+                  </div>
                 </div>
-                
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.imooc.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.imooc.com/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://www.imooc.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>慕课网</strong>
-                                </a>
-                                <p class="overflowClip_2">IT技能学习平台</p>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://cg.163.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="https://cg.163.com/">
+                  <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                      <img data-src="images/favicons/cg_163_com.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
+                    </a>
+                    <div class="xe-comment">
+                      <a href="#" class="xe-user-name overflowClip_1">
+                        <strong>网易CG</strong>
+                      </a>
+                      <p class="overflowClip_2">游戏美术资源</p>
                     </div>
+                  </div>
                 </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.aliyundrive.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="https://www.aliyundrive.com/">
+                  <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                      <img data-src="images/favicons/www_aliyundrive_com.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
+                    </a>
+                    <div class="xe-comment">
+                      <a href="#" class="xe-user-name overflowClip_1">
+                        <strong>阿里云盘</strong>
+                      </a>
+                      <p class="overflowClip_2">云存储服务</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://replit.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="https://replit.com/">
+                  <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                      <img data-src="images/favicons/replit_com.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
+                    </a>
+                    <div class="xe-comment">
+                      <a href="#" class="xe-user-name overflowClip_1">
+                        <strong>Replit</strong>
+                      </a>
+                      <p class="overflowClip_2">在线编程环境</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://mcqa25x.dpdns.org/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="https://mcqa25x.dpdns.org/">
+                  <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                      <img data-src="images/favicons/mcqa25x_dpdns_org.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
+                    </a>
+                    <div class="xe-comment">
+                      <a href="#" class="xe-user-name overflowClip_1">
+                        <strong>MCQA25x</strong>
+                      </a>
+                      <p class="overflowClip_2">个人网站</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://b.mcqa25x.dpdns.org/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="https://b.mcqa25x.dpdns.org/">
+                  <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                      <img data-src="images/favicons/b_mcqa25x_dpdns_org.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
+                    </a>
+                    <div class="xe-comment">
+                      <a href="#" class="xe-user-name overflowClip_1">
+                        <strong>B mcqa25x</strong>
+                      </a>
+                      <p class="overflowClip_2">个人网站</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://ima1ge.mcqa25x.dpdns.org/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="https://ima1ge.mcqa25x.dpdns.org/">
+                  <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                      <img data-src="images/favicons/ima1ge_mcqa25x_dpdns_org.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
+                    </a>
+                    <div class="xe-comment">
+                      <a href="#" class="xe-user-name overflowClip_1">
+                        <strong>RandomBeautyVideo</strong>
+                      </a>
+                      <p class="overflowClip_2">发现每一刻的美好，随机小姐姐视频为您呈现</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://nfq.dpdns.org/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="https://nfq.dpdns.org/">
+                  <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                      <img data-src="images/favicons/nfq_dpdns_org.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
+                    </a>
+                    <div class="xe-comment">
+                      <a href="#" class="xe-user-name overflowClip_1">
+                        <strong>音乐解析器</strong>
+                      </a>
+                      <p class="overflowClip_2">音乐解析器</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <br />
-            
-            <h4 class="text-gray">
-                <i class="fa-solid fa-tags" style="margin-right: 7px;" id="设计素材"></i>设计素材
-            </h4>
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://fontawesome.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://fontawesome.com/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://fontawesome.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>Font Awesome</strong>
-                                </a>
-                                <p class="overflowClip_2">世界上最受欢迎和最容易使用的图标集</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.iconfont.cn/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.iconfont.cn/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://www.iconfont.cn/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>iconfont</strong>
-                                </a>
-                                <p class="overflowClip_2">国内功能且图标内容很丰富的矢量图标库</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://remixicon.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://remixicon.com/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://remixicon.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>Remix Icon</strong>
-                                </a>
-                                <p class="overflowClip_2">为设计师和开发人员精心打造的图标库</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://neumorphism.io/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://neumorphism.io/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://neumorphism.io/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>Neumorphism</strong>
-                                </a>
-                                <p class="overflowClip_2">新拟态样式代码自动生成</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://lingdaima.com/shadow/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://lingdaima.com/shadow/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://lingdaima.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>Smooth Shadow</strong>
-                                </a>
-                                <p class="overflowClip_2">轻松完成好看的 CSS 阴影效果</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://lingdaima.com/jianbianse/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://lingdaima.com/jianbianse/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://lingdaima.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>CSS Gradient</strong>
-                                </a>
-                                <p class="overflowClip_2">在线生成 CSS 渐变色效果</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.tablesgenerator.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.tablesgenerator.com/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://www.tablesgenerator.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>Tables Generator</strong>
-                                </a>
-                                <p class="overflowClip_2">在线生成器轻松创建复杂的表格</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://colorhunt.co/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://colorhunt.co/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://colorhunt.co/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>Color Hunt</strong>
-                                </a>
-                                <p class="overflowClip_2">为设计和艺术项目获取色彩灵感</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://unsplash.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://unsplash.com/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://unsplash.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong>Unsplash</strong>
-                                </a>
-                                <p class="overflowClip_2">一个免版权的精美图片网站</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br />
-            
-            <h4 class="text-gray">
-                <i class="fa-solid fa-tags" style="margin-right: 7px;" id="前端技术"></i>前端技术
-            </h4>
-            <div class="row">
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://angular.cn/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://angular.cn/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://angular.cn/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>Angular</strong>
-          </a>
-          <p class="overflowClip_2">现代 Web 开发平台</p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://react.docschina.org/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://react.docschina.org/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://react.docschina.org/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>React</strong>
-          </a>
-          <p class="overflowClip_2">用于构建用户界面的 JavaScript 库</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://staging-cn.vuejs.org/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://staging-cn.vuejs.org/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://staging-cn.vuejs.org/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>Vue</strong>
-          </a>
-          <p class="overflowClip_2">渐进式 JavaScript 框架</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.naiveui.com/zh-CN/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.naiveui.com/zh-CN/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://www.naiveui.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>Naive UI</strong>
-          </a>
-          <p class="overflowClip_2">一个 Vue 3 组件库，有点意思</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://layui.github.io/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://layui.github.io/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://layui.github.io/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>Layui</strong>
-          </a>
-          <p class="overflowClip_2">开源模块化前端 UI 框架</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://element-plus.gitee.io/zh-CN/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://element-plus.gitee.io/zh-CN/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://element-plus.gitee.io/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>Element Plus</strong>
-          </a>
-          <p class="overflowClip_2">基于 Vue 3.0 的桌面端组件库</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.mdui.org/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.mdui.org/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://www.mdui.org/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>MDUI</strong>
-          </a>
-          <p class="overflowClip_2">轻松地开发 Material Design 网页应用</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://getbootstrap.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://getbootstrap.com/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://getbootstrap.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>Bootstrap</strong>
-          </a>
-          <p class="overflowClip_2">开发响应式布局、移动设备优先的 WEB 项目</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://amazeui.shopxo.net/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://amazeui.shopxo.net/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://amazeui.shopxo.net/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>Amaze</strong>
-          </a>
-          <p class="overflowClip_2">中国首个开源 HTML5 跨屏前端框架</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://youzan.github.io/vant/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://youzan.github.io/vant/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://youzan.github.io/vant/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>Vant</strong>
-          </a>
-          <p class="overflowClip_2">轻量、可靠的移动端 Vue 组件库</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.iviewui.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.iviewui.com/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://www.iviewui.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>iViewUI</strong>
-          </a>
-          <p class="overflowClip_2">一套基于 Vue.js 的高质量 UI 组件库</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-3">
-    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.tailwindcss.cn/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://www.tailwindcss.cn/">
-      <div class="xe-comment-entry">
-        <a class="xe-user-img">
-          <img data-src="https://www.tailwindcss.cn/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-        </a>
-        <div class="xe-comment">
-          <a href="#" class="xe-user-name overflowClip_1">
-            <strong>Tailwind CSS</strong>
-          </a>
-          <p class="overflowClip_2">无需离开您的HTML，即可快速建立现代网站</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-</div>
-<br />
-
-            <h4 class="text-gray">
-                <i class="fa-solid fa-tags" style="margin-right: 7px;" id="友链"></i>友链
-            </h4>
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://2x.nz/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="https://2x.nz/">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://2x.nz/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="https://2x.nz/" target="_blank" class="xe-user-name overflowClip_1">
-                                    <strong>二叉树树</strong>
-                                </a>
-                                <p class="overflowClip_2">《二叉树树》官方网站 - AcoFork</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="openImageViewer()" data-toggle="tooltip" data-placement="bottom" title="图片查看器">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="https://c.mcqa25x.dpdns.org/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
-                            </a>
-                            <div class="xe-comment">
-                                <a href="javascript:void(0)" class="xe-user-name overflowClip_1">
-                                    <strong>图片查看器</strong>
-                                </a>
-                                <p class="overflowClip_2">点击打开图片查看器</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 图片查看器模态框 -->
-                <div id="imageViewerModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="imageViewerModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title" id="imageViewerModalLabel">图片查看器</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="image-container" style="text-align: center;">
-                                    <img id="viewerImage" src="" alt="查看图片" style="max-width: 100%; max-height: 600px;">
-                                </div>
-                                <div class="image-controls" style="margin-top: 15px; text-align: center;">
-                                    <input type="text" id="imageUrl" class="form-control" placeholder="输入图片URL" style="margin-bottom: 10px;">
-                                    <button class="btn btn-primary" onclick="loadImage()">加载图片</button>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <script>
-                    function openImageViewer() {
-                        $('#imageViewerModal').modal('show');
-                    }
-                    
-                    function loadImage() {
-                        var imageUrl = document.getElementById('imageUrl').value;
-                        if (imageUrl) {
-                            document.getElementById('viewerImage').src = imageUrl;
-                        }
-                    }
-                </script>
-            </div>
-            <br />
-
+      
       <!-- 悬浮窗 -->
       <div class="wapnone fk_service">
         <ul>
           <a rel="go-top">
             <li class="fk_service_box fk_service_upward" id="topup" style="display: none;">
-              <div class="fk_service_upward_cont" id="fk-span"> <span class="fk_service_triangle"
+              <div class="fk_service_upward_cont" id="fk-span"> <span class="fk_service_triangle" 
                   id="fk-span-right"></span> <span>返回顶部</span>
               </div>
             </li>
@@ -1204,49 +451,63 @@
       </div>
       <!-- 悬浮窗 end -->
       
-<footer class="main-footer sticky footer-type-1">
-  <div class="footer-inner">
-    <!-- Add your copyright text here -->
-    <p>
-      <i class="fa-solid fa-triangle-exclamation" style="font-size: 1rem; vertical-align: middle; margin-right: 8px; color: #333333;"></i>
-      &copy; 2020 - 2026 | <a href="https://2x.nz/" target="_blank">二叉树树</a> | <a href="https://github.com/MCQA2580/eada/issues" target="_blank">友链申请 & 反馈</a>
-    </p>
-    <!-- <div class="go-up">
-      <a href="#" rel="go-top">
-        <i class="fas fa-angle-up"></i>
-      </a>
-    </div> -->
+      <script src="js/footer.min.js"></script>
+
+      <footer class="main-footer sticky footer-type-1">
+        <div class="footer-inner">
+          <!-- Add your copyright text here -->
+          <p>
+            <i class="fa-solid fa-triangle-exclamation" style="font-size: 1rem; vertical-align: middle; margin-right: 8px; color: #333333;"></i>
+            &copy; 2020 - 2026 | <a href="https://2x.nz/" target="_blank">二叉树树</a> | <a href="https://github.com/MCQA2580/eada/issues" target="_blank">友链申请 & 反馈</a> | Power by <a href="https://github.com/HCLonely/hexo-theme-webstack/" target="_blank"><strong>hexo-theme-webstack</strong></a>
+          </p>
+          <!-- <div class="go-up">
+            <a href="#" rel="go-top">
+              <i class="fas fa-angle-up"></i>
+            </a>
+          </div> -->
+        </div>
+      </footer>
+    </div>
   </div>
-</footer>
-</div>
-</div>
 
-<script src="js/bootstrap.min.js"></script>
-<script src="js/TweenLite.min.js"></script>
-<script src="js/resizeable.min.js"></script>
-<script src="js/joinable.js"></script>
-<script src="js/xenon-api.min.js"></script>
-<script src="js/xenon-toggles.min.js"></script>
-<script src="js/xenon-custom.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/TweenLite.min.js"></script>
+  <script src="js/resizeable.min.js"></script>
+  <script src="js/joinable.js"></script>
+  <script src="js/xenon-api.min.js"></script>
+  <script src="js/xenon-toggles.min.js"></script>
+  <script src="js/xenon-custom.min.js"></script>
+  <script src="js/lozad.min.js"></script>
 
-<script src="js/lozad.min.js"></script>
-<script src="js/footer.min.js"></script>
-
-<script>
+  <!-- 图标加载优化 -->
+  <script>
     // 图标加载优化
     document.addEventListener('DOMContentLoaded', function() {
         // 增强的图片错误处理
         function handleImageError(img) {
             // 使用更明显的base64图标作为fallback
-            img.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNNTAgMjBDMjcuOSAyMCAxMCAzNy45IDEwIDYwczE3LjkgNDAgNDAgNDAgNDAgLTE3LjkgNDAgLTQwLTE3LjktNDAgLTQwLTQwem0wIDYwYzE2LjUgMCAzMC0xMy41IDMwLTMwcy0xMy41LTMwLTMwLTMwLTMwIDEzLjUtMzAgMzAgMTMuNSAzMCAzMCAzMHoiIGZpbGw9IiMzMzMiIG9wYWNpdHk9IjAuNyIvPjwvc3ZnPg==';
-            // 添加错误标记，便于调试
-            img.setAttribute('data-error', 'true');
+            img.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNNTAgMjBDMjcuOSAyMCAxMCAzNy45IDEwIDYwczE3LjkgNDAgNDAgNDAgNDAgLTE3LjkgNDAgLTQwLTE3LjktNDAgLTQwLTQwem0wIDYwczE2LjUtMzAgMzAtMzAgMzAgMTMuNSAzMCAzMC0xMy41IDMwLTMwLTMwcy0xMy41LTMwLTMwLTMwLTMwIDEzLjUtMzAgMzAgMTMuNSAzMCAzMCAzMHoiIGZpbGw9IiMzMzMiIG9wYWNpdHk9IjAuNyIvPjwvc3ZnPg==';
+        }
+        
+        // 预加载常用图标，提高加载速度
+        function preloadIcons() {
+            var commonIcons = [
+                'images/favicons/github_com.ico',
+                'images/favicons/vercel_com.ico',
+                'images/favicons/www_aliyun_com.ico',
+                'images/favicons/www_bilibili_com.ico',
+                'images/favicons/getbootstrap_com.ico'
+            ];
+            
+            for (var i = 0; i < commonIcons.length; i++) {
+                var img = new Image();
+                img.src = commonIcons[i];
+            }
         }
         
         // 为所有图片添加错误处理
         var images = document.querySelectorAll('img');
         for (var i = 0; i < images.length; i++) {
-            // 立即设置错误处理，确保在任何情况下都能捕获错误
             images[i].onerror = function() {
                 handleImageError(this);
             };
@@ -1254,20 +515,18 @@
         
         // 初始化lozad库，用于图片懒加载
         if (typeof lozad !== 'undefined') {
-            // 配置lozad选项，增加重试机制
             var observer = lozad('.lozad', {
                 loaded: function(el) {
-                    // 图片加载成功后添加成功标记
                     el.setAttribute('data-loaded', 'true');
                 },
                 error: function(el) {
-                    // lozad加载失败时调用错误处理
                     handleImageError(el);
-                }
+                },
+                threshold: 0.1,
+                delay: 100
             });
             observer.observe();
         } else {
-            // 如果lozad不可用，直接加载所有图片
             for (var j = 0; j < images.length; j++) {
                 var img = images[j];
                 if (img.dataset.src) {
@@ -1276,76 +535,14 @@
             }
         }
         
-        // 诊断信息
-        console.log('图标加载诊断：共发现 ' + images.length + ' 个图片元素');
+        // 预加载常用图标
+        preloadIcons();
     });
-</script>
+  </script>
 
+  <!-- 直接添加html内容即可 -->
+  <!-- 可设置多行 -->
 
-
-<!-- 直接添加html内容即可 -->
-<!-- 可设置多行 -->
-
-
-<script>
-    // 时间显示功能
-    function updateTime() {
-        const now = new Date();
-        const timeElement = document.getElementById('current-time');
-        const dateElement = document.getElementById('current-date');
-        
-        if (timeElement && dateElement) {
-            // 格式化时间
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            const seconds = now.getSeconds().toString().padStart(2, '0');
-            
-            // 格式化日期
-            const year = now.getFullYear();
-            const month = (now.getMonth() + 1).toString().padStart(2, '0');
-            const day = now.getDate().toString().padStart(2, '0');
-            const weekday = ['日', '一', '二', '三', '四', '五', '六'][now.getDay()];
-            
-            // 更新显示
-            timeElement.textContent = `${hours}:${minutes}:${seconds}`;
-            dateElement.textContent = `${year}-${month}-${day} 星期${weekday}`;
-        }
-    }
-    
-    // 初始调用一次
-    updateTime();
-    
-    // 每秒更新一次
-    setInterval(updateTime, 1000);
-    
-    // 侧边栏点击事件处理
-    document.querySelectorAll('a.smooth').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // 移除所有活动状态
-            document.querySelectorAll('#main-menu li').forEach(function(li) {
-                li.classList.remove('active');
-            });
-            
-            // 添加当前活动状态
-            this.parentElement.classList.add('active');
-            
-            // 获取目标分类的 ID
-            var targetId = this.getAttribute('href');
-            var targetElement = document.querySelector(targetId);
-            
-            // 平滑滚动到目标位置
-            if (targetElement) {
-                var targetPosition = targetElement.offsetTop - 30;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-</script>
-    <script src="/js/footer.js"></script>
 </body>
+
 </html>

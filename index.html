@@ -437,6 +437,22 @@
     </div>
   </div>
   
+  <div class="col-sm-3">
+    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://nfq.dpdns.org/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="https://nfq.dpdns.org/">
+      <div class="xe-comment-entry">
+        <a class="xe-user-img">
+          <img data-src="https://nfq.dpdns.org/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
+        </a>
+        <div class="xe-comment">
+          <a href="#" class="xe-user-name overflowClip_1">
+            <strong>NFQ dpdns</strong>
+          </a>
+          <p class="overflowClip_2">安全验证网站</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 </div>
 <br />
 
@@ -1231,27 +1247,51 @@
 <script src="js/footer.min.js"></script>
 
 <script>
-    // 初始化lozad库，用于图片懒加载
-    window.addEventListener('load', function() {
-        // 简化的图片错误处理
+    // 图标加载优化
+    document.addEventListener('DOMContentLoaded', function() {
+        // 增强的图片错误处理
         function handleImageError(img) {
-            // 使用简单的base64图标作为fallback
-            img.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
+            // 使用更明显的base64图标作为fallback
+            img.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNNTAgMjBDMjcuOSAyMCAxMCAzNy45IDEwIDYwczE3LjkgNDAgNDAgNDAgNDAgLTE3LjkgNDAgLTQwLTE3LjktNDAgLTQwLTQwem0wIDYwYzE2LjUgMCAzMC0xMy41IDMwLTMwcy0xMy41LTMwLTMwLTMwLTMwIDEzLjUtMzAgMzAgMTMuNSAzMCAzMCAzMHoiIGZpbGw9IiMzMzMiIG9wYWNpdHk9IjAuNyIvPjwvc3ZnPg==';
+            // 添加错误标记，便于调试
+            img.setAttribute('data-error', 'true');
         }
         
         // 为所有图片添加错误处理
         var images = document.querySelectorAll('img');
         for (var i = 0; i < images.length; i++) {
+            // 立即设置错误处理，确保在任何情况下都能捕获错误
             images[i].onerror = function() {
                 handleImageError(this);
             };
         }
         
-        // 初始化lozad
+        // 初始化lozad库，用于图片懒加载
         if (typeof lozad !== 'undefined') {
-            var observer = lozad('.lozad');
+            // 配置lozad选项，增加重试机制
+            var observer = lozad('.lozad', {
+                loaded: function(el) {
+                    // 图片加载成功后添加成功标记
+                    el.setAttribute('data-loaded', 'true');
+                },
+                error: function(el) {
+                    // lozad加载失败时调用错误处理
+                    handleImageError(el);
+                }
+            });
             observer.observe();
+        } else {
+            // 如果lozad不可用，直接加载所有图片
+            for (var j = 0; j < images.length; j++) {
+                var img = images[j];
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                }
+            }
         }
+        
+        // 诊断信息
+        console.log('图标加载诊断：共发现 ' + images.length + ' 个图片元素');
     });
 </script>
 

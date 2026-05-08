@@ -8,7 +8,10 @@
     <title>导航 - 首页</title>
     <meta name="keywords" content="网址导航,个人导航,实用工具">
     <meta name="description" content="个人导航网站，收集实用工具和常用网站">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dark.min.css">
     <link rel="stylesheet" href="css/animation.min.css">
@@ -126,6 +129,7 @@
                         <span class="type-text">工具</span>
                         <ul class="search-type">
                             <li><input hidden type="radio" name="type" id="type-ping" value="https://ping.chinaz.com/" data-placeholder="请输入网址 ( 不带http:// )"><label for="type-ping"><span style="color:#00599e">PING检测</span></label></li>
+                            <li><input hidden type="radio" name="type" id="type-ip138" value="https://www.ip138.com/iplookup.asp?ip=" data-placeholder="请输入 IP 地址"><label for="type-ip138"><span style="color:#ff5722">IP查询</span></label></li>
                             <li><input hidden type="radio" name="type" id="type-icp" value="https://icp.chinaz.com/" data-placeholder="请输入网址 ( 不带http:// )"><label for="type-icp"><span style="color:#ffac00">备案查询</span></label></li>
                             <li><input hidden type="radio" name="type" id="type-br" value="https://rank.chinaz.com/all/" data-placeholder="请输入网址 ( 不带http:// )"><label for="type-br"><span style="color:#55a300">权重查询</span></label></li>
                             <li><input hidden type="radio" name="type" id="type-links" value="https://link.chinaz.com/" data-placeholder="请输入网址 ( 不带http:// )"><label for="type-links"><span style="color:#313439" class="dark-text">友链检测</span></label></li>
@@ -412,6 +416,21 @@
                         <strong>Tool.lu</strong>
                       </a>
                       <p class="overflowClip_2">在线工具集合</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.ip138.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="https://www.ip138.com/">
+                  <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                      <img data-src="https://www.ip138.com/favicon.ico" class="lozad img-circle" width="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" >
+                    </a>
+                    <div class="xe-comment">
+                      <a href="#" class="xe-user-name overflowClip_1">
+                        <strong>IP138</strong>
+                      </a>
+                      <p class="overflowClip_2">IP地址查询</p>
                     </div>
                   </div>
                 </div>
@@ -1769,10 +1788,10 @@
         // 预加载常用图标，提高加载速度
         function preloadIcons() {
             var commonIcons = [
-                'images/favicons/github_com.ico',
-                'images/favicons/vercel_com.ico',
-                'images/favicons/www_aliyun_com.ico',
-                'images/favicons/www_bilibili_com.ico',
+                'https://github.com/favicon.ico',
+                'https://vercel.com/favicon.ico',
+                'https://www.aliyun.com/favicon.ico',
+                'https://www.bilibili.com/favicon.ico',
                 'https://getbootstrap.com/favicon.ico'
             ];
             
@@ -1782,11 +1801,26 @@
             }
         }
         
+        // 处理加载失败时的本地/远程回退
+        function tryLoadAlternateSource(img) {
+            if (img.dataset.localSrc && !img.dataset.triedLocal) {
+                img.dataset.triedLocal = 'true';
+                img.src = img.dataset.localSrc;
+                return;
+            }
+            if (img.dataset.src && !img.dataset.triedRemote) {
+                img.dataset.triedRemote = 'true';
+                img.src = img.dataset.src;
+                return;
+            }
+            handleImageError(img);
+        }
+
         // 为所有图片添加错误处理
         var images = document.querySelectorAll('img');
         for (var i = 0; i < images.length; i++) {
             images[i].onerror = function() {
-                handleImageError(this);
+                tryLoadAlternateSource(this);
             };
         }
         

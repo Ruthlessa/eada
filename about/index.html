@@ -2,7 +2,6 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="无情" />
     <title>关于本站 - 导航</title>
@@ -14,12 +13,14 @@
     <link rel="stylesheet" href="../css/animation.min.css">
     <link rel="stylesheet" href="../css/mobile.min.css">
 
-    <link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/font-awesome/6.0.0/css/all.min.css">
+    <!-- FontAwesome 非阻塞加载，避免阻塞首屏渲染 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </noscript>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <!-- Izitoast -->
-    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/css/iziToast.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/js/iziToast.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script>
         // 搜索数据对象，用于存储用户定义的搜索配置
         var userDefinedSearchData = {};
@@ -27,11 +28,6 @@
         var expandAll = false;
     </script>
     <script src="../js/header.min.js"></script>
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="../js/html5shiv.min.js"></script>
-        <script src="../js/respond.min.js"></script>
-    <![endif]-->
     <!-- / FB Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://mcqa2580.github.io/eada/about/index.html">
@@ -56,6 +52,10 @@
 </style>
 
 <body class="page-body">
+    <script>
+        // 尽早应用主题，避免页面闪烁
+        applyTheme();
+    </script>
     <div class="page-container">
 
 
@@ -85,7 +85,7 @@
                     <li class="menu-item" style="margin-left:auto;margin-right: 10px;">
                         <i class="fa-solid fa-message" style="margin-right:6px"></i>
                         <span id="jinrishici-sentence">正在加载今日诗词....</span>
-                        <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+                        <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8" defer></script>
                     </li>
                 </ul>
             </nav>
@@ -119,32 +119,12 @@
                             </div>
                         </li>
                     </a>
+                    <li class="fk_service_box fk_service_ax" id="theme-toggle" onclick="switchNightMode()" title="切换明暗主题">
+                        <div class="fk_service_ax_cont"><span>切换主题</span></div>
+                    </li>
                 </ul>
             </div>
             <!-- 悬浮窗 end -->
-            <script>
-                (function () {
-                    if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
-                        if (new Date().getHours() > 22 || new Date().getHours() < 6) {
-                            document.body.classList.add('night');
-                            document.cookie = "night=1;path=/";
-                        } else {
-                            document.body.classList.remove('night');
-                            document.cookie = "night=0;path=/";
-                        }
-                    } else {
-                        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-                        if (night == '0') {
-                            document.body.classList.remove('night');
-                        } else if (night == '1') {
-                            document.body.classList.add('night');
-                        }
-                    }
-                })();
-            </script>
-            <script>
-                document.title = '关于本站 - 导航';
-            </script>
 
             <footer class="main-footer sticky footer-type-1">
                 <div class="footer-inner">
@@ -163,13 +143,12 @@
 </div>
 </div>
 
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/TweenLite.min.js"></script>
-    <script src="../js/resizeable.min.js"></script>
-    <script src="../js/joinable.js"></script>
-    <script src="../js/xenon-api.min.js"></script>
-    <script src="../js/xenon-toggles.min.js"></script>
-    <script src="../js/xenon-custom.min.js"></script>
+    <script src="../js/bootstrap.min.js" defer></script>
+    <script src="../js/TweenLite.min.js" defer></script>
+    <script src="../js/resizeable.min.js" defer></script>
+    <script src="../js/xenon-api.min.js" defer></script>
+    <script src="../js/xenon-toggles.min.js" defer></script>
+    <script src="../js/xenon-custom.min.js" defer></script>
 
     <!-- 直接添加html内容即可 -->
     <!-- 可设置多行 -->

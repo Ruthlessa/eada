@@ -284,9 +284,11 @@ body {
 .menu-item {
     display: flex !important;
     align-items: center;
-    margin-left: 10px;
+    margin-left: auto;
+    margin-right: 10px;
+    min-height: auto;
     padding: 0 !important;
-    font-size: 1.55rem;
+    font-size: 14px;
 }
 
 .menu-item a {
@@ -331,8 +333,8 @@ body {
     background: rgb(44 46 47 / 80%);
     border: 0;
     width: 60px;
-    height: 36px;
-    margin: 8px;
+    height: 100%;
+    margin: auto !important;
     line-height: 36px;
     border-radius: 3px;
     transition: 0.3s;
@@ -346,7 +348,8 @@ body {
 
 #search button i {
     color: #fff;
-    font-size: 18px
+    font-size: 18px;
+    margin: 16px;
 }
 
 .search-group {
@@ -459,7 +462,8 @@ body {
 
 .search-type {
     white-space: nowrap;
-    margin: 0
+    margin: 0;
+    overflow: auto !important;
 }
 
 .search-type label {
@@ -467,7 +471,8 @@ body {
 }
 
 .search-type li {
-    display: inline-block
+    list-style: none;
+    display: inline-block;
 }
 
 .search-type li label {
@@ -500,15 +505,6 @@ body {
     transition: all .3s ease
 }
 
-.search-type li {
-    list-style: none;
-    display: inline-block
-}
-
-.search-type {
-    overflow: auto !important;
-}
-
 #search-text {
     transition: 0.3s;
 }
@@ -516,15 +512,6 @@ body {
 #search-text:hover {
     box-shadow: 0px 6px 12px -4px rgb(0 0 0 / 20%);
     transition: 0.3s;
-}
-
-#search button {
-    height: 100%;
-    margin: auto !important;
-}
-
-#search button i {
-    margin: 16px;
 }
 
 /*链接卡片*/
@@ -911,6 +898,7 @@ body {
 .fk_service_ax {
     background: url(../images/ico/sun.png) no-repeat center center #fff;
     background-size: 50% 50%;
+    cursor: pointer;
 }
 
 .fk_service_ax:hover {
@@ -987,13 +975,6 @@ body {
     align-items: center;
     justify-content: flex-end;
     padding: 10px 0;
-}
-
-.menu-item {
-    margin-left: auto;
-    margin-right: 10px;
-    min-height: auto;
-    font-size: 14px;
 }
 
 footer.main-footer {
@@ -1085,6 +1066,76 @@ pre {
         max-width: unset !important;
         min-width: unset !important;
     }
+}
+
+/*图片查看器*/
+.image-viewer {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.image-viewer-content {
+    position: relative;
+    margin: 10% auto;
+    padding: 0;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.image-viewer-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.image-viewer-close:hover,
+.image-viewer-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.image-viewer-body {
+    position: relative;
+    padding: 20px;
+    background-color: #fefefe;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.image-viewer-body img {
+    max-width: 100%;
+    max-height: 70vh;
+    margin-bottom: 20px;
+}
+
+.image-viewer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-viewer-controls button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.image-viewer-controls button:hover {
+    background-color: #e9ecef;
 }
 
 /*打印样式*/

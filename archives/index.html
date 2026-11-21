@@ -2,7 +2,6 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="无情" />
     <title>导航 - 归档</title>
@@ -14,14 +13,14 @@
     <link rel="stylesheet" href="../css/animation.min.css">
     <link rel="stylesheet" href="../css/mobile.min.css">
 
-    <link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/font-awesome/6.0.0/css/all.min.css">
+    <!-- FontAwesome 非阻塞加载，避免阻塞首屏渲染 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </noscript>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 
-    <!-- Izitoast -->
-    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/css/iziToast.min.css">
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/js/iziToast.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
 
     <script>
         // 搜索数据对象，用于存储用户定义的搜索配置
@@ -31,12 +30,7 @@
     </script>
     
     <script src="../js/header.min.js"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="../js/html5shiv.min.js"></script>
-        <script src="../js/respond.min.js"></script>
-    <![endif]-->
+    
     
     <!-- / FB Open Graph -->
     <meta property="og:type" content="article">
@@ -56,6 +50,10 @@
 </head>
 
 <body class="page-body">
+    <script>
+        // 尽早应用主题，避免页面闪烁
+        applyTheme();
+    </script>
     <div class="page-container">
 
 
@@ -85,7 +83,7 @@
                     <li class="menu-item" style="margin-left:auto;margin-right: 10px;">
                         <i class="fa-solid fa-message" style="margin-right:6px"></i>
                         <span id="jinrishici-sentence">正在加载今日诗词....</span>
-                        <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+                        <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8" defer></script>
                     </li>
                 </ul>
             </nav>
@@ -199,24 +197,107 @@
         </div>
       </div>
       <script type="text/javascript">
-        eval(function (e, t, a, c, i, n) {
-          if (i = function (e) {
-              return (e < t ? "" : i(parseInt(e / t))) + (35 < (e %= t) ? String.fromCharCode(e + 29) : e.toString(
-                36))
-            }, !"".replace(/^/, String)) {
-            for (; a--;) n[i(a)] = c[a] || i(a);
-            c = [function (e) {
-              return n[e]
-            }], i = function () {
-              return "\\w+"
-            }, a = 1
+        // 搜索表单逻辑：搜索引擎切换、记住选项、新窗口打开
+        (function () {
+          var typeInputs = document.querySelectorAll('input[name="type"]');
+          var form = document.querySelector('#super-search-fm');
+          var searchInput = document.querySelector('#search-text');
+          var blankCheck = document.querySelector('#set-search-blank');
+          var groups = document.querySelectorAll('.search-group');
+          var firstType = typeInputs[0];
+
+          function save(key, value) {
+            window.localStorage.setItem('superSearch' + key, value);
           }
-          for (; a--;) c[a] && (e = e.replace(new RegExp("\\b" + i(a) + "\\b", "g"), c[a]));
-          return e
-        }('!2(){2 g(){h(),i(),j(),k()}2 h(){d.9=s()}2 i(){z a=4.8(\'A[B="7"][5="\'+p()+\'"]\');a&&(a.9=!0,l(a))}2 j(){v(u())}2 k(){w(t())}2 l(a){P(z b=0;b<e.O;b++)e[b].I.1c("s-M");a.F.F.F.I.V("s-M")}2 m(a,b){E.H.S("L"+a,b)}2 n(a){6 E.H.Y("L"+a)}2 o(a){f=a.3,v(u()),w(a.3.5),m("7",a.3.5),c.K(),l(a.3)}2 p(){z b=n("7");6 b||a[0].5}2 q(a){m("J",a.3.9?1:-1),x(a.3.9)}2 r(a){6 a.11(),""==c.5?(c.K(),!1):(w(t()+c.5),x(s()),s()?E.U(b.G,+T X):13.Z=b.G,10 0)}2 s(){z a=n("J");6 a?1==a:!0}2 t(){6 4.8(\'A[B="7"]:9\').5}2 u(){6 4.8(\'A[B="7"]:9\').W("14-N")}2 v(a){c.1e("N",a)}2 w(a){b.G=a}2 x(a){a?b.3="1a":b.16("3")}z y,a=4.R(\'A[B="7"]\'),b=4.8("#18-C-19"),c=4.8("#C-12"),d=4.8("#17-C-15"),e=4.R(".C-1b"),f=a[0];P(g(),y=0;y<a.O;y++)a[y].D("Q",o);d.D("Q",q),b.D("1d",r)}();',
-          62, 77,
-          "||function|target|document|value|return|type|querySelector|checked||||||||||||||||||||||||||var|input|name|search|addEventListener|window|parentNode|action|localStorage|classList|newWindow|focus|superSearch|current|placeholder|length|for|change|querySelectorAll|setItem|new|open|add|getAttribute|Date|getItem|href|void|preventDefault|text|location|data|blank|removeAttribute|set|super|fm|_blank|group|remove|submit|setAttribute"
-          .split("|"), 0, {}));
+
+          function load(key) {
+            return window.localStorage.getItem('superSearch' + key);
+          }
+
+          // 当前选中的搜索引擎地址
+          function currentTypeValue() {
+            return document.querySelector('input[name="type"]:checked').value;
+          }
+
+          // 当前选中搜索引擎的提示语
+          function currentPlaceholder() {
+            return document.querySelector('input[name="type"]:checked').getAttribute('data-placeholder');
+          }
+
+          // 高亮当前分组
+          function showGroup(input) {
+            for (var i = 0; i < groups.length; i++) {
+              groups[i].classList.remove('s-current');
+            }
+            input.parentNode.parentNode.parentNode.classList.add('s-current');
+          }
+
+          // 是否新窗口打开
+          function newWindowEnabled() {
+            var flag = load('newWindow');
+            return flag ? flag == 1 : true;
+          }
+
+          function applyNewWindow(enabled) {
+            if (enabled) {
+              form.target = '_blank';
+            } else {
+              form.removeAttribute('target');
+            }
+          }
+
+          // 初始化：恢复记忆的搜索引擎、提示语、分组与新窗口设置
+          function init() {
+            blankCheck.checked = newWindowEnabled();
+            var savedType = document.querySelector('input[name="type"][value="' + (load('type') || firstType.value) + '"]');
+            if (savedType) {
+              savedType.checked = true;
+              showGroup(savedType);
+            }
+            searchInput.setAttribute('placeholder', currentPlaceholder());
+            form.action = currentTypeValue();
+            applyNewWindow(newWindowEnabled());
+          }
+
+          // 切换搜索引擎
+          function onTypeChange(e) {
+            firstType = e.target;
+            searchInput.setAttribute('placeholder', currentPlaceholder());
+            form.action = e.target.value;
+            save('type', e.target.value);
+            searchInput.focus();
+            showGroup(e.target);
+          }
+
+          // 记住新窗口设置
+          function onBlankChange(e) {
+            save('newWindow', e.target.checked ? 1 : -1);
+            applyNewWindow(e.target.checked);
+          }
+
+          // 提交搜索
+          function onSubmit(e) {
+            e.preventDefault();
+            if (searchInput.value === '') {
+              searchInput.focus();
+              return false;
+            }
+            form.action = currentTypeValue() + searchInput.value;
+            applyNewWindow(newWindowEnabled());
+            if (newWindowEnabled()) {
+              window.open(form.action, String(+new Date()));
+            } else {
+              location.href = form.action;
+            }
+          }
+
+          init();
+          for (var i = 0; i < typeInputs.length; i++) {
+            typeInputs[i].addEventListener('change', onTypeChange);
+          }
+          blankCheck.addEventListener('change', onBlankChange);
+          form.addEventListener('submit', onSubmit);
+        })();
       </script>
       <!-- 搜索 end -->
       
@@ -234,7 +315,8 @@
         </div>
       </div>
       <script>
-        $(document).ready(function () {
+        // DOM 就绪后初始化公告栏滚动（此时 jQuery 已加载）
+        document.addEventListener('DOMContentLoaded', function () {
           var ul = $(".bulletin-ul");
           var li = ul.children();
           if (li.length > 1) {
@@ -265,11 +347,14 @@
               </div>
             </li>
           </a>
+          <li class="fk_service_box fk_service_ax" id="theme-toggle" onclick="switchNightMode()" title="切换明暗主题">
+            <div class="fk_service_ax_cont"><span>切换主题</span></div>
+          </li>
         </ul>
       </div>
       <!-- 悬浮窗 end -->
       
-      <script src="/js/footer.min.js"></script>
+      <script src="../js/footer.min.js" defer></script>
 
       <footer class="main-footer sticky footer-type-1">
         <div class="footer-inner">
@@ -288,14 +373,12 @@
     </div>
   </div>
 
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/TweenLite.min.js"></script>
-  <script src="../js/resizeable.min.js"></script>
-  <script src="../js/joinable.js"></script>
-  <script src="../js/xenon-api.min.js"></script>
-  <script src="../js/xenon-toggles.min.js"></script>
-  <script src="../js/xenon-custom.min.js"></script>
-  <script src="../js/lozad.min.js"></script>
+  <script src="../js/bootstrap.min.js" defer></script>
+  <script src="../js/TweenLite.min.js" defer></script>
+  <script src="../js/resizeable.min.js" defer></script>
+  <script src="../js/xenon-api.min.js" defer></script>
+  <script src="../js/xenon-toggles.min.js" defer></script>
+  <script src="../js/xenon-custom.min.js" defer></script>
 
   <!-- 直接添加html内容即可 -->
   <!-- 可设置多行 -->
